@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 
-const port = 1337;
+const port = 833;
 
 // Add a route
 app.get("/", (req, res) => {
