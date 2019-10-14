@@ -25,6 +25,6 @@ app.get("/hello/:msg", (req, res) => {
 });
 
 // Start up server
-app.listen(port, () => console.log(`Example API listening on port ${port}!`));
+// app.listen(port, () => console.log(`Example API listening on port ${port}!`));
 
 module.exports = app;
