@@ -1,10 +1,7 @@
-const express = require("express");
-const app = express();
+var express = require('express');
+var router = express.Router();
 
-const port = 8333;
-
-// Add a route
-app.get("/", (req, res) => {
+router.get('/', function(req, res, next) {
     const data = {
         data: {
             msg: "Hello World"
@@ -14,7 +11,7 @@ app.get("/", (req, res) => {
     res.json(data);
 });
 
-app.get("/hello/:msg", (req, res) => {
+router.get("/hello/:msg", (req, res, next) => {
     const data = {
         data: {
             msg: req.params.msg
@@ -24,7 +21,4 @@ app.get("/hello/:msg", (req, res) => {
     res.json(data);
 });
 
-// Start up server
-// app.listen(port, () => console.log(`Example API listening on port ${port}!`));
-
-module.exports = app;
+module.exports = router;
